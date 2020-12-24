@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+    h1{
+        color:blue;
+        text-align:center;
+        font-size:50px;
+    }
+    *
+{
+    margin:0;
+    padding:0;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    background-image:url(https://www.wallpaperup.com/uploads/wallpapers/2013/11/14/175148/7d1e5024866338a55c886a955d2213f2.jpg);
+    background-size:cover;
+}
+
+.box{
+    height:440px;
+    width:300px;
+    background-color:rgba(255, 255, 255, 0.845);
+    margin-left:35%;
+    margin-top:5%;
+    position:absolute;
+    padding:10px 50px;
+    overflow:hidden;
+}
+
+.button-box{
+    width:220px;
+    margin:35px auto;
+    position:relative;
+    border-radius:30px;
+    box-shadow:0 0 20px 9px #ff61241f;
+}
+
+.toggle-button{
+    padding:10px 30px;
+    cursor:pointer;
+    border:none;
+    outline:none;
+    border-radius:30px;
+    background-color:transparent;
+    z-index:2;
+    position:relative;
+}
+
+.social-icon{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+img{
+    width:30px;
+    height:30px;
+    margin-left:20px;
+}
+
+.btn{
+    position:absolute;
+    top:0;
+    left:0;
+    width:110px;
+    height:100%;
+    background-image:linear-gradient(to right,#ff105f,#ffad06);
+    border-radius:30px;
+    transition:0.5s;
+}
+
+.input-box{
+    position:absolute;
+    top:150px;
+    width:280px;
+    transition:0.5s;
+}
+
+input{
+    width:100%;
+    padding:10px 0px;
+    margin:15px 0px;
+    outline:none;
+    border:none;
+    border-bottom:1px solid grey;
+    background-color:transparent;
+}
+
+.submitbutton{
+    width:85%;
+    padding:10px 13px;
+    cursor:pointer;
+    background-image:linear-gradient(to right,#ff105f,#ffad06);
+    outline:none;
+    border:none;
+    border-radius:30px;
+    margin:auto;
+    margin-left:20px;
+    margin-top:20px;
+}
+
+.register-form{
+    margin-left:450px;
+}
+
+
+    </style>
+</head>
+<body>         
+   <h1>Contact us</h1> 
+   <div class="box">
+    <div class="button-box">
+    <div class="btn"></div>
+    <button class="toggle-button" onclick="login();">Login</button>
+    <button class="toggle-button" onclick="register();">Register</button>
+    </div>
+    <div class="social-icon">
+        <a href="https://www.facebook.com/"target="_blank"><img src="../covid/portfolio/prehistoric/images/facebook.png.png"></a>
+        <a href="https://twitter.com/login?lang=en "target="_blank"><img src="../covid/portfolio/prehistoric/images/twitter (1).png (1).png"></a>
+        <a href="https://myaccount.google.com/?utm_source=sign_in_no_continue"target="_blank"><img src="./google.png"></a>
+    </div>
+         
+    <div class="login-form input-box">
+        <input type="text" placeholder="username">
+        <input type="password" placeholder="password">
+        <button class="submitbutton">Submit</button>
+    </div>
+    <div class="register-form input-box">
+        <input type="text" placeholder="username">
+       <input type="email" placeholder="email">
+        <input type="password" placeholder="password">
+        <button class="submitbutton">Submit</button>
+    </div>
+    </div>       
+    
+    <script>
+        var btn=document.querySelector(".btn");
+        var Login=document.querySelector(".login-form");
+        var Register=document.querySelector(".register-form");
+        function login(){
+        btn.style.marginLeft="0px";
+        Login.style.marginLeft="0px";
+        Register.style.marginLeft="450px";
+    }
+        function register(){
+        btn.style.marginLeft="110px";
+        Login.style.marginLeft="-450px";
+        Register.style.marginLeft="0px";
+    }
+    </script>
+</body>
+</html>
